@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="50dp"
-            android:text="RS Cepat Kembali"
+            android:text="RS Cepat "
             android:textAlignment="center"
             android:layout_gravity="center"
 
