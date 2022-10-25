@@ -28,40 +28,43 @@ public class datePickerFragment extends Fragment{
     private EditText editText;
     private DatePickerDialog.OnDateSetListener dateSetListener;
 
-    public View onCreatView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+    public datePickerFragment(){
+        //Required empty public constuctor
+
+    }
+
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View view = inflater.inflate(R.layout.buatpertemuan_fragment, container, false);
 
         this.textView = view.findViewById(R.id.tv_tanggal);
         this.editText = view.findViewById(R.id.et_Tanggal);
 
-        textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Calendar calendar = Calendar.getInstance();
-                int year = calendar.get(Calendar.YEAR);
-                int month = calendar.get(Calendar.MONTH);
-                int day = calendar.get(Calendar.DAY_OF_MONTH);
+        textView.setOnClickListener(view1 -> {
+            Calendar calendar = Calendar.getInstance();
+            int year = calendar.get(Calendar.YEAR);
+            int month = calendar.get(Calendar.MONTH);
+            int day = calendar.get(Calendar.DAY_OF_MONTH);
 
-                DatePickerDialog dialog = new DatePickerDialog(getContext(), android.R.style.Theme_DeviceDefault, dateSetListener, year, month, day);
+            DatePickerDialog dialog = new DatePickerDialog(getContext(), android.R.style.Theme_DeviceDefault, dateSetListener, year, month, day);
 
-                dialog.show();
-            }
+            dialog.show();
         });
 
-        dateSetListener = new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-                month = month + 1;
-                Log.d(TAG,"onDataSet: dd//mm/yyyy" + day +"/" + month + "/" + year );
+        dateSetListener = (datePicker, year, month, day) -> {
+            month = month + 1;
+            Log.d(TAG,"onDataSet: dd//mm/yyyy" + day +"/" + month + "/" + year );
 
-                String date = day + "/" + month + "/" + year;
-                textView.setText(date);
-            }
+            String date = day + "/" + month + "/" + year;
+            textView.setText(date);
         };
 
         return view;
     }
 
+    public datePickerFragment newInstance() {
+        datePickerFragment fragment = new datePickerFragment();
+        return fragment;
+    }
 }
 
 
