@@ -127,20 +127,21 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="Tanggal"
+            android:id="@+id/tv_tanggal"
 
             >
 
         </TextView>
 
-        <Button
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="pilih"
-            android:id="@+id/button_Tanggal"
+            android:id="@+id/et_Tanggal"
 
             >
 
-        </Button>
+        </EditText>
 
 
 
