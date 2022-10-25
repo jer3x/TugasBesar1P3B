@@ -1,65 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white">
+    android:background="@android:color/white"
 
-    <Button
-        android:layout_width="wrap_content"
+    android:orientation="vertical">
+
+    <!--Home-->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/fl_home"
-        android:text="home"
-        android:backgroundTint="@color/white"
-        android:textColor="@color/black"
+        android:background="@drawable/border">
+        <TextView
+            android:id="@+id/home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HOME"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="20dp"/>
+    </LinearLayout>
 
-
-        >
-
-    </Button>
-
-    <Button
-        android:layout_width="wrap_content"
+    <!--Pertemuan-->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:id="@+id/fl_page2"
-        android:text="pertemuan"
-        android:backgroundTint="@color/white"
-        android:textColor="@color/black"
+        android:background="@drawable/border">
+        <TextView
+            android:id="@+id/pertemuan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PERTEMUAN"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="20dp"/>
+    </LinearLayout>
 
-
-        >
-
-    </Button>
-
-    <Button
-        android:layout_width="wrap_content"
+    <!--Dokter-->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:id="@+id/fl_dokter"
-        android:text="dokter"
-        android:backgroundTint="@color/white"
-        android:textColor="@color/black"
+        android:background="@drawable/border">
+        <TextView
+            android:id="@+id/dokter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DOKTER"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="20dp"/>
+    </LinearLayout>
 
-
-        >
-
-    </Button>
-
-    <Button
-        android:layout_width="wrap_content"
+    <!--Exit-->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:id="@+id/fl_exit"
-        android:text="exit"
-        android:backgroundTint="@color/white"
-        android:textColor="@color/black"
+        android:background="@drawable/border">
+        <TextView
+            android:id="@+id/exit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EXIT"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="20dp"/>
+    </LinearLayout>
 
-
-        >
-
-    </Button>
-
-
-
-</FrameLayout>
+</LinearLayout>
